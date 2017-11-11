@@ -4,11 +4,11 @@
   "description": "A Pomodoro Clock frontend",
   "main": "index.html",
   "scripts": {
-    "build": "webpack && cp public/* dist",
+    "build": "webpack && cp assets/* dist",
     "coverage": "nyc  --reporter=html --reporter=text mocha 'test/**/test-*.js'",
     "test": "mocha 'test/**/test-*.js' && eslint test lib",
-    "start": "webpack-dev-server --hot",
-    "deploy": "surge --project dist --domain frontend-testing.surge.sh"
+    "start": "webpack-dev-server -d",
+    "deploy": "surge --project dist --domain mj-pomodoro-timer.surge.sh"
   },
   "repository": {
     "type": "git",
