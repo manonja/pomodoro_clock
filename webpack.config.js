@@ -7,7 +7,7 @@ module.exports = {
     /* Define our output file name. */
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
     },
 
     /* Set up the development server. */
@@ -15,7 +15,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, "assets"),
         publicPath: "/",
         port: 3000,
-        watchContentBase: true
+        watchContentBase: true,
     },
 
     /* Add source map so that we can use debug tools in Chrome. */

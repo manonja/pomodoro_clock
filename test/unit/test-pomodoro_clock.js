@@ -1,26 +1,14 @@
-const {
-    describe,
-    it
-} = require("mocha");
-const {
-    expect
-} = require("chai");
+import test from "ava";
+import pomodoroClock from "../../lib/pomodoro_clock";
 
-var pomodoro_clock = require("../../lib/pomodoro_clock.js");
+test("converts 1 minute to 60 seconds", (t) => {
+    t.is(pomodoroClock.convertMinToSec(1), 60);
+});
 
-describe("Pomodoro clock", function () {
-    describe("Minute to second conversion", function () {
-        it("converts 1 minute to 60 seconds", function () {
-            expect(pomodoro_clock.convertMinToSec(1)).to.equal(60);
-        });
-    });
-    describe("Time to string conversion", function () {
-        it("converts 10 seconds into '0:10'", function () {
-            expect(pomodoro_clock.timeToString(10)).to.equal("0:10");
-        });
-        it("converts 69 seconds into '1:09'", function () {
-            expect(pomodoro_clock.timeToString(69)).to.equal("1:09");
-        });
+test("converts 10 seconds into '0:10'", (t) => {
+    t.is(pomodoroClock.timeToString(10), "0:10");
+});
 
-    });
+test("converts 69 seconds into '1:09'", (t) => {
+    t.is(pomodoroClock.timeToString(69), "1:09");
 });
