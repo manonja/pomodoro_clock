@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack && cp assets/* dist",
     "coverage": "nyc  --reporter=html --reporter=text mocha 'test/**/test-*.js'",
-    "test": "mocha 'test/**/test-*.js' && eslint test lib",
+    "test": "ava && eslint test lib",
     "start": "webpack-dev-server -d",
     "deploy": "surge --project dist --domain mj-pomodoro-timer.surge.sh"
   },
@@ -28,6 +28,5 @@
     "nyc": "^11.3.0",
     "require": "^2.4.20",
     "style-loader": "^0.19.0"
-  },
-  "dependencies": {}
+  }
 }
