@@ -1,4 +1,5 @@
-import path from "path";
+const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
     /* Define our entry point. */
@@ -17,6 +18,13 @@ module.exports = {
         port: 3000,
         watchContentBase: true,
     },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+        }),
+    ],
 
     /* Add source map so that we can use debug tools in Chrome. */
     devtool: "sourcemap",
