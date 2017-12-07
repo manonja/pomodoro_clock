@@ -10,6 +10,12 @@
     "start": "webpack-dev-server -d",
     "deploy": "surge --project dist --domain mj-pomodoro-timer.surge.sh"
   },
+  "env": {
+   "es6": true,
+   "browser": true,
+   "node": true,
+   "jquery": true
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manonja/pomodoro_clock.git"
