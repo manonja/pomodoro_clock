@@ -4,7 +4,7 @@
   font-weight: bold;
 }
 
-.session{
+.sessionLength{
   margin-top:2%;
   border-radius: 30px solid black;
 }
@@ -34,7 +34,7 @@ hr {
   font-size: 20px;
 }
 
-input#pause, input#session {
+input#breakLength, input#sessionLength {
   border: none;
   text-align: center;
   font-size: 24px;
