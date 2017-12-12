@@ -26,6 +26,20 @@ module.exports = {
         }),
     ],
 
+    module: {
+        loaders: [{
+            test: path.join(__dirname, "dist"),
+            loader: "babel-loader",
+        }],
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+        }),
+    ],
+
     /* Add source map so that we can use debug tools in Chrome. */
     devtool: "sourcemap",
 };
