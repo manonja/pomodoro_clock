@@ -7,7 +7,7 @@ module.exports = {
         "node": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": "eslint-config-airbnb",
     "rules": {
         "indent": [
             "error",
@@ -24,6 +24,17 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "no-param-reassign": [
+            "error", {
+                "props": true,
+                "ignorePropertyModificationsFor": ["doc", "win"]
+            }
         ]
-    }
+    },
+    "plugins": [
+        "jsx-a11y",
+        "react"
+    ],
+
 };
