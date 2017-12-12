@@ -18,6 +18,20 @@ module.exports = {
         port: 3000,
         watchContentBase: true,
     },
+    /* Set up the modules */
+    module: {
+        loaders: [{
+            test: path.join(__dirname, "dist"),
+            loader: "babel-loader",
+        }],
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+        }),
+    ],
 
     module: {
         loaders: [{
