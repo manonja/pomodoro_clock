@@ -9,6 +9,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
+        library: "EntryPoint",
     },
 
     /* Set up the development server. */
@@ -32,13 +33,6 @@ module.exports = {
             loader: "babel-loader",
         }],
     },
-
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-        }),
-    ],
 
     /* Add source map so that we can use debug tools in Chrome. */
     devtool: "sourcemap",
