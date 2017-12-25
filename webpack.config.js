@@ -20,13 +20,6 @@ module.exports = {
         watchContentBase: true,
     },
 
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-        }),
-    ],
-
     module: {
         loaders: [{
             test: path.join(__dirname, "dist"),
