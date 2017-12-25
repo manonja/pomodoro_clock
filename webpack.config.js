@@ -33,13 +33,6 @@ module.exports = {
         }],
     },
 
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-        }),
-    ],
-
     /* Add source map so that we can use debug tools in Chrome. */
     devtool: "sourcemap",
 };
