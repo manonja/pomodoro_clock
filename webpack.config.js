@@ -9,6 +9,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
+        library: "EntryPoint",
     },
 
     /* Set up the development server. */
