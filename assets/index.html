@@ -21,7 +21,7 @@
     <div class="w3-row" id="settings">
       <div class="w3-col s3 w3-center"><p></p></div>
       <div class="w3-col s3 w3-center"><p>BREAKLENGTH</p>
-        <input type="number" class="w3-dark-grey" min ="1" max="10" id="breakLength" value="5"  />
+        <input type="number" class="w3-dark-grey" min ="1" max="10" id="breakLength" value="2"  />
       </div>
 
       <div class="w3-col s3 w3-center"><p>SESSIONLENGTH</p>
@@ -36,7 +36,9 @@
         <div class="circle w3-circle w3-deep-orange" id="timerBackground">
             <h3 class="currentSession">Time Left</h3>
             <div class="w3-hover-text-dark-grey" id="timer" onclick="EntryPoint.startCounter()">01:00</div>
-            <!-- <h4 class="w3-hover-text-dark-grey" id="resetCounter"> Reset </h4> -->
+            <h4 class="w3-hover-text-dark-grey" id="pauseButton" onclick="EntryPoint.pauseCounter()"> pause </h4>
+            <h4 class="w3-hover-text-dark-grey" id="resumeButton" onclick="EntryPoint.resumeCounter()"> resume </h4>
+
         </div>
 
       </div>
