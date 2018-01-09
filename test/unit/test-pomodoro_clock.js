@@ -1,5 +1,5 @@
 import test from "ava";
-import pomodoroClock from "../../lib/pomodoro_clock";
+import pomodoroClock from "../../lib/pomodoroClock";
 
 test("converts 1 minute to 60 seconds", (t) => {
     t.is(pomodoroClock.convertMinToSec(1), 60);

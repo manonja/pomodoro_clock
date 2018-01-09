@@ -1,3 +1,4 @@
+require("webpack");
 const path = require("path");
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
+        library: "EntryPoint",
     },
 
     /* Set up the development server. */
@@ -16,6 +18,13 @@ module.exports = {
         publicPath: "/",
         port: 3000,
         watchContentBase: true,
+    },
+
+    module: {
+        loaders: [{
+            test: path.join(__dirname, "dist"),
+            loader: "babel-loader",
+        }],
     },
 
     /* Add source map so that we can use debug tools in Chrome. */

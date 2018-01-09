@@ -4,12 +4,6 @@
     <meta charset="utf-8">
     <title>Pomodoro Clock</title>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-      crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- <link type="text/css" rel="stylesheet" href="assets/style.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,12 +20,12 @@
 
     <div class="w3-row" id="settings">
       <div class="w3-col s3 w3-center"><p></p></div>
-      <div class="w3-col s3 w3-center" id="breaklength"><p>BREAKLENGTH</p>
-        <input type="number" class="w3-dark-grey" min ="1" max="10" id="pause" value="5"  />
+      <div class="w3-col s3 w3-center"><p>BREAKLENGTH</p>
+        <input type="number" class="w3-dark-grey" min ="1" max="10" id="breakLength" value="2"  />
       </div>
 
-      <div class="w3-col s3 w3-center" id="sessionlength"><p>SESSIONLENGTH</p>
-        <input type="number" class="w3-dark-grey" min="5" max="50" id="session" value="1"  />
+      <div class="w3-col s3 w3-center"><p>SESSIONLENGTH</p>
+        <input type="number" class="w3-dark-grey" min="1" max="50" id="sessionLength" value="1"  />
       </div>
       <div class="w3-col s3 w3-center"><p></p></div>
     </div>
@@ -39,10 +33,9 @@
     <div class="row">
       <div class="w3-col s4 w3-center"><p></p></div>
       <div class="w3-col s4 w3-center" >
-        <div class="circle w3-circle w3-deep-orange" >
+        <div class="circle w3-circle w3-deep-orange" id="timerBackground">
             <h3 class="currentSession">Time Left</h3>
-            <div class="w3-hover-text-dark-grey" id="timer">01:00</div>
-            <h4 class="w3-hover-text-dark-grey"id="resetCounter" onclick="resetCounter()">Reset</h4>
+            <div class="w3-hover-text-dark-grey" id="timer" onclick="EntryPoint.startCounter()">1:00</div>
         </div>
 
       </div>
@@ -50,8 +43,6 @@
       <div class="w3-col s4 w3-center">
       </div>
     </div>
-
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script src="/bundle.js"></script>
 

@@ -5,10 +5,16 @@
   "main": "index.html",
   "scripts": {
     "build": "webpack && cp assets/* dist",
-    "coverage": "nyc  --reporter=html --reporter=text mocha 'test/**/test-*.js'",
+    "coverage": "nyc  --reporter=html --reporter=text ava 'test/**/test-*.js'",
     "test": "ava && eslint test lib",
     "start": "webpack-dev-server -d",
     "deploy": "surge --project dist --domain mj-pomodoro-timer.surge.sh"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true
   },
   "repository": {
     "type": "git",
@@ -32,9 +38,11 @@
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
     "require": "^2.4.20",
-    "style-loader": "^0.19.0"
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "ava": "^0.23.0"
   },
   "dependencies": {
-    "ava": "^0.23.0"
+    "jquery": "^3.2.1"
   }
 }

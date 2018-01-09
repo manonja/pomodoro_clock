@@ -24,10 +24,17 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ],
+        "no-param-reassign": [
+            "error", {
+                "props": true,
+                "ignorePropertyModificationsFor": ["doc", "win"]
+            }
         ]
     },
     "plugins": [
         "jsx-a11y",
         "react"
-    ]
+    ],
+
 };
