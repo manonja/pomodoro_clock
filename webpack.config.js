@@ -19,7 +19,7 @@ module.exports = {
         port: 3000,
         watchContentBase: true,
     },
-
+    /* Set up the modules */
     module: {
         loaders: [{
             test: path.join(__dirname, "dist"),
